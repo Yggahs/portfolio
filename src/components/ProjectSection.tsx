@@ -38,20 +38,20 @@ const projects = [
     demoUrl: "",
     githubUrl: "#",
   },
-  {
-    id: 5,
-    title: "The Danger Zone",
-    description: `The Danger Zone is a third person shooter inspired by the Ratchet and Clank universe where the player takes control of a crash test dummy and the objective is to survive the onslaught of enemies to get to the end of the gauntlet. I worked on the weapons, the player's controls and the enemies' AI.`,
-    images: ["/projects/silence-in-the-snow.png"],
-    tags: ["Unreal 4"],
-    demoUrl: "",
-    githubUrl: "",
-  },
+  // {
+  //   id: 5,
+  //   title: "The Danger Zone",
+  //   description: `The Danger Zone is a third person shooter inspired by the Ratchet and Clank universe where the player takes control of a crash test dummy and the objective is to survive the onslaught of enemies to get to the end of the gauntlet. I worked on the weapons, the player's controls and the enemies' AI.`,
+  //   images: ["/projects/silence-in-the-snow.png"],
+  //   tags: ["Unreal 4"],
+  //   demoUrl: "",
+  //   githubUrl: "",
+  // },
   {
     id: 6,
     title: "Thrash the Dove",
     description: `Thrash The Dove is a physics based game inspired by the flash game Toss the Turtle: the objective of the game is to have the dove land as far as possible; the player is provided with a shotgun that can launch the dove even farther.`,
-    images: ["/projects/silence-in-the-snow.png"],
+    images: ["/projects/thrashdove.png"],
     tags: ["GFC"],
     demoUrl: "https://www.youtube.com/watch?v=tn8j_Dq-MJ8",
     githubUrl: "",
@@ -61,9 +61,9 @@ const projects = [
     title: "Han is Solo",
     description: `Han Is Solo is a stealth game set in the Star Wars universe; the player takes control of Han Solo and the objective is to escape the Empire base without being caught by the droids.
 The player has to collect different color-coded keycards in order to escape the maze; ammos can be picked up around the maze to shoot droids with a stun gun that will disable them temporarily.`,
-    images: ["/projects/silence-in-the-snow.png"],
+    images: ["/projects/hanissolo.png"],
     tags: ["GFC"],
-    demoUrl: "https://www.youtube.com/watch?v=tn8j_Dq-MJ8",
+    demoUrl: "https://www.youtube.com/watch?v=GVEVFpo-uRU",
     githubUrl: "",
   },
   {
@@ -71,9 +71,9 @@ The player has to collect different color-coded keycards in order to escape the 
     title: "Volcano Isles",
     description: `This is a small project made in OpenGL, we were asked to create a scene containing objects, particle effects, water, multitexturing, a skybox and a height map.
 The scene is meant to represent a tropical volcanic archipelago; it’s main volcano is erupting and a lone airplane is passing by to witness the spectacle. In the meantime, a small indigenous hut is left to its fate as it inhabitants have already evacuated the area.`,
-    images: ["/projects/silence-in-the-snow.png"],
+    images: ["/projects/volcanoisles.png"],
     tags: ["OpenGL"],
-    demoUrl: "https://www.youtube.com/watch?v=tn8j_Dq-MJ8",
+    demoUrl: "https://www.youtube.com/watch?v=KBYI3O1ZtM0",
     githubUrl: "",
   },
   {
@@ -82,15 +82,15 @@ The scene is meant to represent a tropical volcanic archipelago; it’s main vol
     description: `This project showcases some shaders made in Unreal. There are 5 main shaders, each of which was custom made though the use of Unreal's shader tool. A version of this same project was also made in Unity.
 The shaders in this project are:
 <ul>
-<li>Fire - The wall of fire in front of the room;</li>
-<li>Blood - The liquid that covers the floor;</li>
-<li>Fiery Dissolvence - The effect applied to the disappearing demon;</li>
-<li>Glowing Altars - The effect applied to the altars;</li>
-<li>Tornado of souls - The cone of revolving images around the demon.</li>
+<li><b>Fire</b> - The wall of fire in front of the room;</li>
+<li><b>Blood</b> - The liquid that covers the floor;</li>
+<li><b>Fiery Dissolvence</b> - The effect applied to the disappearing demon;</li>
+<li><b>Glowing Altars</b> - The effect applied to the altars;</li>
+<li><b>Tornado of souls</b> - The cone of revolving images around the demon.</li>
 </ul>`,
-    images: ["/projects/silence-in-the-snow.png"],
+    images: ["/projects/unrealshaders.png"],
     tags: ["Unreal 4"],
-    demoUrl: "https://www.youtube.com/watch?v=tn8j_Dq-MJ8",
+    demoUrl: "https://www.youtube.com/watch?v=52AHUlJ0zQU",
     githubUrl: "",
   },
 ];
@@ -103,7 +103,7 @@ export const ProjectSection = () => {
           Featured <span className="text-primary">Projects</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          lorem ipsum dolor sit amet
+          Here are a few of projects I've worked on
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
