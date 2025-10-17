@@ -1,4 +1,4 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { Briefcase, Code, Joystick, Laptop, User } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -62,13 +62,17 @@ export const AboutSection = () => {
               {" "}
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
+                  <Joystick className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg"> Game Development</h4>
                   <p className="text-muted-foreground">
-                    Cras ullamcorper urna a tristique hendrerit. Fusce
-                    ullamcorper sit amet urna hendrerit ornare.
+                    Throughout my game development journey, I've used many
+                    different engines, such as Unity and Unreal; I have also
+                    worked on projects that required deployment on mobile and a
+                    singular PS4 game. More recently I've also had the chance to
+                    work on a AR/VR training application for a high profile
+                    client in the energy industry.
                   </p>
                 </div>
               </div>
@@ -76,13 +80,15 @@ export const AboutSection = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
+                  <Laptop className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> Web Development</h4>
                   <p className="text-muted-foreground">
-                    Cras ullamcorper urna a tristique hendrerit. Fusce
-                    ullamcorper sit amet urna hendrerit ornare.
+                    I've been working as a front-end web developer since 2019. I
+                    have experience in many modern frameworks, such as Angular,
+                    React and Vue; Other relevant technologies include Redux,
+                    rxjs, and their Angular counterparts.
                   </p>
                 </div>
               </div>
@@ -93,10 +99,12 @@ export const AboutSection = () => {
                   <Briefcase className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg"> Current employment</h4>
                   <p className="text-muted-foreground">
-                    Cras ullamcorper urna a tristique hendrerit. Fusce
-                    ullamcorper sit amet urna hendrerit ornare.
+                    I am currently employed at DGS S.p.A. in Rome as a
+                    developer, and have been for the past{" "}
+                    {new Date().getFullYear() - 2022} years. They have free
+                    coffee in the office!
                   </p>
                 </div>
               </div>

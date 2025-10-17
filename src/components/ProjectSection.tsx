@@ -1,5 +1,5 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
-import { Carousel } from "./Carousel";
+import { ArrowRight, ExternalLink, Github, Youtube } from "lucide-react";
+// import { Carousel } from "./Carousel";
 
 const projects = [
   {
@@ -8,8 +8,9 @@ const projects = [
     description: `<b>Winner of Kingston Univeristy's 2018 Game Jam!</b> <br/> Cell Resistance is a top-down shooter taking place inside a sick person's body, where the player controls a white cell that can switch between two states of resistance. This game was developed as a team effort over the course of 24 hours during Kingston University's 2018 Game Jam. The contest's theme was "Resistance", thus we settled on the idea of a little white cell helping a body resist a viral attack. I was assigned the task of creating the AI for the enemies in the game.`,
     images: ["/projects/cellRes2.jpg", "/projects/cellRes1.jpg"],
     tags: ["Unity"],
-    demoUrl: "https://www.youtube.com/watch?v=ftNPEQPny4w",
-    githubUrl: "#",
+    demoUrl: "",
+    githubUrl: "https://github.com/Yggahs/CellRes",
+    youtubeUrl: "https://www.youtube.com/watch?v=ftNPEQPny4w",
   },
   {
     id: 2,
@@ -17,8 +18,9 @@ const projects = [
     description: `This project was created in a week as a way to showcase Unity's recent implementation of the Entity Component System. This system can allow for exceptional levels of optimization and thus the amount of entities that are allowed to be on the screen without the framerate dropping.`,
     images: ["/projects/ecs.png"],
     tags: ["Unity", "ECS"],
-    demoUrl: "https://www.youtube.com/watch?v=x0Y9T27UZaU",
-    githubUrl: "#",
+    demoUrl: "",
+    githubUrl: "https://github.com/Yggahs/ECS",
+    youtubeUrl: "https://www.youtube.com/watch?v=x0Y9T27UZaU",
   },
   {
     id: 3,
@@ -26,8 +28,9 @@ const projects = [
     description: `This project was created in a week as a way to showcase Unity's recent implementation of the Entity Component System. This system can allow for exceptional levels of optimization and thus the amount of entities that are allowed to be on the screen without the framerate dropping.`,
     images: ["/projects/ps4.png"],
     tags: ["Unity", "PS4"],
-    demoUrl: "https://www.youtube.com/watch?v=_bj2gIhxJ2o",
-    githubUrl: "#",
+    demoUrl: "",
+    githubUrl: "https://github.com/Yggahs/ArkanoidPs4",
+    youtubeUrl: "https://www.youtube.com/watch?v=_bj2gIhxJ2o",
   },
   {
     id: 4,
@@ -36,7 +39,8 @@ const projects = [
     images: ["/projects/silence-in-the-snow.png"],
     tags: ["Unity", "Photon"],
     demoUrl: "",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Yggahs/SilenceInTheSnow",
+    youtubeUrl: "",
   },
   // {
   //   id: 5,
@@ -53,8 +57,9 @@ const projects = [
     description: `Thrash The Dove is a physics based game inspired by the flash game Toss the Turtle: the objective of the game is to have the dove land as far as possible; the player is provided with a shotgun that can launch the dove even farther.`,
     images: ["/projects/thrashdove.png"],
     tags: ["GFC"],
-    demoUrl: "https://www.youtube.com/watch?v=tn8j_Dq-MJ8",
+    demoUrl: "",
     githubUrl: "",
+    youtubeUrl: "https://www.youtube.com/watch?v=tn8j_Dq-MJ8",
   },
   {
     id: 7,
@@ -63,8 +68,9 @@ const projects = [
 The player has to collect different color-coded keycards in order to escape the maze; ammos can be picked up around the maze to shoot droids with a stun gun that will disable them temporarily.`,
     images: ["/projects/hanissolo.png"],
     tags: ["GFC"],
-    demoUrl: "https://www.youtube.com/watch?v=GVEVFpo-uRU",
+    demoUrl: "",
     githubUrl: "",
+    youtubeUrl: "https://www.youtube.com/watch?v=GVEVFpo-uRU",
   },
   {
     id: 8,
@@ -73,8 +79,9 @@ The player has to collect different color-coded keycards in order to escape the 
 The scene is meant to represent a tropical volcanic archipelago; it’s main volcano is erupting and a lone airplane is passing by to witness the spectacle. In the meantime, a small indigenous hut is left to its fate as it inhabitants have already evacuated the area.`,
     images: ["/projects/volcanoisles.png"],
     tags: ["OpenGL"],
-    demoUrl: "https://www.youtube.com/watch?v=KBYI3O1ZtM0",
+    demoUrl: "",
     githubUrl: "",
+    youtubeUrl: "https://www.youtube.com/watch?v=KBYI3O1ZtM0",
   },
   {
     id: 9,
@@ -90,8 +97,9 @@ The shaders in this project are:
 </ul>`,
     images: ["/projects/unrealshaders.png"],
     tags: ["Unreal 4"],
-    demoUrl: "https://www.youtube.com/watch?v=52AHUlJ0zQU",
-    githubUrl: "",
+    demoUrl: "",
+    githubUrl: "https://github.com/Yggahs/UnrealShaders",
+    youtubeUrl: "https://www.youtube.com/watch?v=52AHUlJ0zQU",
   },
 ];
 
@@ -103,13 +111,15 @@ export const ProjectSection = () => {
           Featured <span className="text-primary">Projects</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are a few of projects I've worked on
+          Here are a few of projects I've worked on.
+          <br /> You'll find links to demos, videos and repos on the bottom
+          left!
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overdlow-hidden shadow-xs card-hover"
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col"
             >
               <div className="h-48 overdlow-hidden">
                 {/* <Carousel
@@ -123,7 +133,7 @@ export const ProjectSection = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="p-6">
+              <div className="flex flex-col flex-1 p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, key) => (
                     <span
@@ -136,12 +146,12 @@ export const ProjectSection = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
                 <p
-                  className="text-muted-foreground text-sm mb-4"
+                  className="text-muted-foreground text-sm mb-4 flex-grow"
                   dangerouslySetInnerHTML={{ __html: project.description }}
                 >
                   {/* {project.description} */}
                 </p>
-                <div className="flex justify-between items-center">
+                <div className="mt-auto flex justify-between items-center">
                   <div className="flex space-x-3">
                     {project.demoUrl ? (
                       <a
@@ -161,6 +171,17 @@ export const ProjectSection = () => {
                         className="text-foreground/80 hover:text-primary transition-colors duration-300"
                       >
                         <Github size={20} />
+                      </a>
+                    ) : (
+                      ""
+                    )}
+                    {project.youtubeUrl ? (
+                      <a
+                        href={project.youtubeUrl}
+                        target="_blank"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <Youtube size={20} />
                       </a>
                     ) : (
                       ""
